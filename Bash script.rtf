@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red15\green112\blue1;\red255\green255\blue255;\red0\green0\blue0;
+\red0\green0\blue109;\red144\green1\blue18;\red101\green76\blue29;\red157\green0\blue210;}
+{\*\expandedcolortbl;;\cssrgb\c0\c50196\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c0\c6275\c50196;\cssrgb\c63922\c8235\c8235;\cssrgb\c47451\c36863\c14902;\cssrgb\c68627\c0\c85882;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 # !/bin/bash\cf0 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 LF\cf0 \strokec4 =\cf6 \strokec6 $(ls)\cf0 \cb1 \strokec4 \
+\cf5 \cb3 \strokec5 FDS\cf0 \strokec4 =\cf6 \strokec6 $(df -h)\cf0 \cb1 \strokec4 \
+\cf5 \cb3 \strokec5 SSP\cf0 \strokec4 =\cf6 \strokec6 $(\cf7 \strokec7 pwd\cf6 \strokec6 )\cf0 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 #DCH=$(cat ~/.bash_history)\cf0 \cb1 \strokec4 \
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb3 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "\\n * Bash Commands *\\n"\cf0 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 \strokec5 PS3\cf0 \strokec4 =\cf6 \strokec6 "Please choose from the options above: "\cf0 \cb1 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 select\cf0 \strokec4  \cf5 \strokec5 opt\cf0 \strokec4  \cf8 \strokec8 in\cf0 \strokec4  \cf6 \strokec6 "List files"\cf0 \strokec4  \cf6 \strokec6 "Show free disk space"\cf0 \strokec4  \cf6 \strokec6 "Show system path"\cf0 \strokec4  \cf6 \strokec6 "Display command history"\cf0 \strokec4  \cf6 \strokec6 "Backup files"\cf0 \strokec4  \cf6 \strokec6 "Exit"\cf0 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8 do\cf0 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb3     \cf8 \strokec8 case\cf0 \strokec4  \cf5 \strokec5 $opt\cf0 \strokec4  \cf8 \strokec8 in\cf0 \cb1 \strokec4 \
+\cb3         \cf6 \strokec6 "List files"\cf0 \strokec4 )\cb1 \
+\cb3             \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "\\n\cf5 \strokec5 $opt\cf6 \strokec6  - Listing all files in the current directory: \\n"\cf0 \strokec4 ;\cb1 \
+\cb3             \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 "\cf5 \strokec5 $LF\cf6 \strokec6 "\cf0 \strokec4 ;;\cb1 \
+\cb3         \cf6 \strokec6 "Show free disk space"\cf0 \strokec4 )   \cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "\\n\cf5 \strokec5 $opt\cf6 \strokec6  - Showing available disk space: \\n"\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 "\cf5 \strokec5 $FDS\cf6 \strokec6 "\cf0 \strokec4 ;;\cb1 \
+\cb3         \cf6 \strokec6 "Show system path"\cf0 \strokec4 )\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "\\n\cf5 \strokec5 $opt\cf6 \strokec6  - Showing the system path: \\n"\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 "\cf5 \strokec5 $SSP\cf6 \strokec6 "\cf0 \strokec4 ;;\cb1 \
+\cb3         \cf6 \strokec6 "Display command history"\cf0 \strokec4 )\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "\\n\cf5 \strokec5 $opt\cf6 \strokec6  - Showing the previous commands: \\n"\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 history\cf0 \strokec4 ;;\cb1 \
+\cb3         \cf6 \strokec6 "Backup files"\cf0 \strokec4 )\cb1 \
+\cb3            \cf7 \strokec7 read\cf0 \strokec4  \cf6 \strokec6 -p\cf0 \strokec4  \cf6 \strokec6 "Enter the directory path to backup: "\cf0 \strokec4  \cf6 \strokec6 dir_path\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 "Note: This will backup \cf5 \strokec5 $dir_path\cf6 \strokec6  along with all its sub-directories"\cf0 \strokec4 ;\cb1 \
+\cb3            \cf5 \strokec5 timestamp\cf0 \strokec4 =\cf6 \strokec6 $(date +"%Y-%m-%d_%H-%M-%S")\cf0 \cb1 \strokec4 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "\\n\cf5 \strokec5 $opt\cf6 \strokec6  - Now recursively backing up files of the specified path: \\n"\cf0 \strokec4 ;\cb1 \
+\cb3            sudo \cf6 \strokec6 cp\cf0 \strokec4  \cf6 \strokec6 -R\cf0 \strokec4  \cf5 \strokec5 $dir_path\cf0 \strokec4  \cf6 \strokec6 BackupFolder\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 "\cf5 \strokec5 $BUD\cf6 \strokec6 "\cf0 \strokec4 ;;\cb1 \
+\cb3         \cf6 \strokec6 "Exit"\cf0 \strokec4 )\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 "Goodbye :)"\cf0 \cb1 \strokec4 \
+\cb3            \cf8 \strokec8 break\cf0 \strokec4 ;;\cb1 \
+\cb3         *)\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "Invalid Entry, try the following options\\n"\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "1) List files 2) Show free disk space 3) Show system path\\n"\cf0 \strokec4 ;\cb1 \
+\cb3            \cf7 \strokec7 echo\cf0 \strokec4  \cf6 \strokec6 -e\cf0 \strokec4  \cf6 \strokec6 "4) Display command history 5) Backup files 6) Exit\\n"\cf0 \strokec4 ;;\cb1 \
+\cb3     \cf8 \strokec8 esac\cf0 \cb1 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 done\cf0 \cb1 \strokec4 \
+}
